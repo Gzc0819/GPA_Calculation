@@ -1,0 +1,235 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 页面基础样式 */
+body {
+    font-family: 'Arial', sans-serif; /* 字体设置 */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* 渐变背景 */
+    min-height: 100vh; /* 最小高度为视口高度 */
+    padding: 20px; /* 页面内边距 */
+}
+
+/* 主容器样式 */
+.container {
+    max-width: 900px; /* 最大宽度 */
+    margin: 0 auto; /* 水平居中 */
+    background: white; /* 白色背景 */
+    border-radius: 15px; /* 圆角 */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+    padding: 40px; /* 内边距 */
+}
+
+/* 页面标题样式 */
+h1 {
+    text-align: center; /* 居中对齐 */
+    color: #333; /* 文字颜色 */
+    margin-bottom: 30px; /* 底部外边距 */
+    font-size: 2.5em; /* 字体大小 */
+}
+
+/* 输入区域样式 */
+.input-section {
+    margin-bottom: 30px; /* 底部外边距 */
+}
+
+/* 课程输入表单样式 */
+.course-input {
+    display: flex; /* 弹性布局 */
+    gap: 10px; /* 元素间距 */
+    flex-wrap: wrap; /* 换行 */
+}
+
+/* 输入框和选择框样式 */
+.course-input input,
+.course-input select {
+    flex: 1; /* 弹性增长 */
+    min-width: 150px; /* 最小宽度 */
+    padding: 12px; /* 内边距 */
+    border: 2px solid #e0e0e0; /* 边框 */
+    border-radius: 8px; /* 圆角 */
+    font-size: 14px; /* 字体大小 */
+    transition: border-color 0.3s; /* 边框颜色过渡效果 */
+}
+
+/* 输入框聚焦样式 */
+.course-input input:focus,
+.course-input select:focus {
+    outline: none; /* 移除默认轮廓 */
+    border-color: #667eea; /* 边框颜色变为主题色 */
+}
+
+/* 添加按钮样式 */
+.course-input button {
+    padding: 12px 24px; /* 内边距 */
+    background: #667eea; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    border: none; /* 无边框 */
+    border-radius: 8px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    font-size: 14px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    transition: background 0.3s; /* 背景颜色过渡效果 */
+}
+
+/* 添加按钮悬停样式 */
+.course-input button:hover {
+    background: #5568d3; /* 背景颜色变深 */
+}
+
+/* 课程列表区域样式 */
+.course-list {
+    margin-bottom: 30px; /* 底部外边距 */
+}
+
+/* 课程列表标题样式 */
+.course-list h2 {
+    color: #333; /* 文字颜色 */
+    margin-bottom: 15px; /* 底部外边距 */
+    font-size: 1.5em; /* 字体大小 */
+}
+
+/* 表格样式 */
+table {
+    width: 100%; /* 宽度100% */
+    border-collapse: collapse; /* 边框合并 */
+    background: #f8f9fa; /* 背景颜色 */
+    border-radius: 8px; /* 圆角 */
+    overflow: hidden; /* 溢出隐藏 */
+}
+
+/* 表头样式 */
+thead {
+    background: #667eea; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+}
+
+/* 表头和表格单元格样式 */
+th,
+td {
+    padding: 12px; /* 内边距 */
+    text-align: left; /* 左对齐 */
+    border-bottom: 1px solid #e0e0e0; /* 底部边框 */
+}
+
+/* 表头文字样式 */
+th {
+    font-weight: bold; /* 字体加粗 */
+}
+
+/* 表格行悬停样式 */
+tbody tr:hover {
+    background: #e8e9ea; /* 背景颜色变浅 */
+}
+
+/* 修改按钮样式 */
+.edit-btn {
+    background: #27ae60; /* 绿色背景 */
+    color: white; /* 文字颜色 */
+    border: none; /* 无边框 */
+    padding: 6px 12px; /* 内边距 */
+    border-radius: 4px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    font-size: 12px; /* 字体大小 */
+    margin-right: 5px; /* 右侧外边距 */
+    transition: background 0.3s; /* 背景颜色过渡效果 */
+}
+
+/* 修改按钮悬停样式 */
+.edit-btn:hover {
+    background: #219a52; /* 背景颜色变深 */
+}
+
+/* 删除按钮样式 */
+.delete-btn {
+    background: #e74c3c; /* 红色背景 */
+    color: white; /* 文字颜色 */
+    border: none; /* 无边框 */
+    padding: 6px 12px; /* 内边距 */
+    border-radius: 4px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    font-size: 12px; /* 字体大小 */
+    transition: background 0.3s; /* 背景颜色过渡效果 */
+}
+
+/* 删除按钮悬停样式 */
+.delete-btn:hover {
+    background: #c0392b; /* 背景颜色变深 */
+}
+
+/* 结果显示区域样式 */
+.result-section {
+    text-align: center; /* 居中对齐 */
+}
+
+/* 计算按钮样式 */
+.result-section button {
+    padding: 15px 40px; /* 内边距 */
+    background: #667eea; /* 背景颜色 */
+    color: white; /* 文字颜色 */
+    border: none; /* 无边框 */
+    border-radius: 8px; /* 圆角 */
+    cursor: pointer; /* 鼠标指针变为手型 */
+    font-size: 18px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    transition: background 0.3s; /* 背景颜色过渡效果 */
+    margin-bottom: 20px; /* 底部外边距 */
+}
+
+/* 计算按钮悬停样式 */
+.result-section button:hover {
+    background: #5568d3; /* 背景颜色变深 */
+}
+
+/* 结果显示容器样式 */
+.result {
+    font-size: 2em; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    color: #667eea; /* 文字颜色 */
+    padding: 20px; /* 内边距 */
+    background: #f8f9fa; /* 背景颜色 */
+    border-radius: 8px; /* 圆角 */
+    display: none; /* 默认隐藏 */
+}
+
+/* 结果显示容器显示样式 */
+.result.show {
+    display: block; /* 显示 */
+    animation: fadeIn 0.5s; /* 淡入动画 */
+}
+
+/* 淡入动画定义 */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* 透明度0 */
+        transform: translateY(-10px); /* 向上移动10px */
+    }
+    to {
+        opacity: 1; /* 透明度1 */
+        transform: translateY(0); /* 回到原位置 */
+    }
+}
+
+/* 响应式设计：移动端适配 */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px; /* 减少内边距 */
+    }
+    
+    h1 {
+        font-size: 2em; /* 减小字体大小 */
+    }
+    
+    .course-input {
+        flex-direction: column; /* 垂直排列 */
+    }
+    
+    .course-input input,
+    .course-input select,
+    .course-input button {
+        width: 100%; /* 宽度100% */
+    }
+}

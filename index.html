@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 字符编码设置 -->
+    <meta charset="UTF-8">
+    <!-- 响应式布局设置 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 页面标题 -->
+    <title>GPA 计算器</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 主容器 -->
+    <div class="container">
+        <!-- 页面标题 -->
+        <h1>计算器</h1>
+        
+        <!-- 输入区域：用于添加课程 -->
+        <div class="input-section">
+            <div class="course-input">
+                <!-- 课程名称输入框 -->
+                <input type="text" id="courseName" placeholder="课程名称">
+                <!-- 学分输入框，支持0.5为步长 -->
+                <input type="number" id="credits" placeholder="学分" step="0.5" min="0">
+                <!-- 分数输入框，0-100分 -->
+                <input type="number" id="score" placeholder="分数 (0-100)" step="1" min="0" max="100">
+                <!-- 添加/更新课程按钮 -->
+                <button id="addCourse">添加课程</button>
+            </div>
+        </div>
+
+        <!-- 课程列表区域 -->
+        <div class="course-list">
+            <h2>课程列表</h2>
+            <!-- 课程表格 -->
+            <table>
+                <!-- 表头 -->
+                <thead>
+                    <tr>
+                        <th>课程名称</th>
+                        <th>学分</th>
+                        <th>分数</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <!-- 表格内容，动态生成 -->
+                <tbody id="courseTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 结果显示区域 -->
+        <div class="result-section">
+            <!-- 计算按钮 -->
+            <button id="calculateGPA">计算</button>
+            <!-- 结果显示容器 -->
+            <div id="result" class="result"></div>
+        </div>
+    </div>
+
+    <!-- 引入JavaScript逻辑文件 -->
+    <script src="script.js"></script>
+</body>
+</html>
